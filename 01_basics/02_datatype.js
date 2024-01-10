@@ -24,7 +24,7 @@ let holderName = "ajay"
              // typeof operator then you will get object. 
     7. Undefined
 
-    Object is the non-primitive datatype.
+    Object,array,function is the non-primitive datatype.
 */  
 
 let number  = 123;
