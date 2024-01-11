@@ -13,8 +13,8 @@ let stringMark = String(Marks);
 // console.log(typeof stringMark);
 // console.log(stringMark);
 
-let name = "ajay" // 0 ke alawa aap kuch bhi hold karado varaible main wo true hi aayega
-let boolean = Boolean(name)
+let name = "ajay" // 0 ke alanwa aap kuch bhi hold karado varaible main wo true hi aayega
+let boolean = Boolean(name);
 // console.log(boolean); //true
 
 // console.log("1" + 2);
