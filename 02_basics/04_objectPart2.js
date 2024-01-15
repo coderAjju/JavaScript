@@ -58,8 +58,26 @@ let objectArray = [
 
 // ----------- how to play with keys and values of object ----------------
 
-console.log(Object.keys(tinderUser)); // object keys are arrange in array
-console.log(Object.values(tinderUser)); // object values are arrange in array
-console.log(Object.entries(tinderUser)) // output:=> [ [ 'name', 'Ajay' ], [ 'city', 'gkp' ], [ 'isLoggedIn', 'true' ] ]
+// console.log(Object.keys(tinderUser)); // object keys are arrange in array
+// console.log(Object.values(tinderUser)); // object values are arrange in array
+// console.log(Object.entries(tinderUser)) // output:=> [ [ 'name', 'Ajay' ], [ 'city', 'gkp' ], [ 'isLoggedIn', 'true' ] ]
 
-console.log(tinderUser.hasOwnProperty("isLoggedIn")) // it is used to check the specific property is exist in object or not.
+// console.log(tinderUser.hasOwnProperty("isLoggedIn")) // it is used to check the specific property is exist in object or not.
+
+
+
+// object destructuring
+
+const course = {
+    courseName : "javascript",
+    price : "999",
+    courseInstructor:"Hitesh"
+}
+
+// console.log(course.courseInstructor)
+
+/* NOTE :=> agar hum object ko destructure kar rahe hain to object ke keys ka use kareinge as a variable otherwise 
+error will be generate */
+
+const {courseName,price,courseInstructor:instructor} = course;
+console.log(courseName,price,instructor);
