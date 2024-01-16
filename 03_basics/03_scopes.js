@@ -40,4 +40,13 @@ console.log(d);  // yaha per output 32 aayega kyu var globaly variable declare k
 
 
 
+// You can ignore it
+console.log(addOne(5))
+function addOne(num){
+    return num+1;
+}
 
+// console.log(addTwo(2));
+const addTwo = function(num){
+    return num+2;
+}
