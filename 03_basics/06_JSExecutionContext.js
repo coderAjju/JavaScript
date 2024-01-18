@@ -20,4 +20,6 @@
     Step2:=> To second step main memory creation phase aata hai jisme sabhi varaible ko rakha jata hai aur usko value undefined assign ki jati hai. aur function ko unke defination ke saath rakh diya jata hai.
 
     Step3:=> Aur last main execution phase aata hai jisme sabhi variable ko unki values ko assign kiya jata hai aur function ke liye alag se execution context banta hain jisme memory phase aur execution phase banta hai.Aur jo function kuch return karte hain wo global
+
+    jyada jankari ke liye readme file check karein
 */
