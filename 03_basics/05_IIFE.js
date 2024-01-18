@@ -12,7 +12,7 @@ chai();  // ye to mera regular function hai
 )(); // IIFE function ko nhi pata hota hai ki usse function kaha khatam karna hai essi liye IIFE function ke end main semicolon(;) lagana jaroori hai. agar aap uske just baad phir se ek IIFE function likh rhe hai.
 
 (
-    ()=>{ // aur ese unnamed IIFE function kahte hain.
+    ()=>{ // aur ese unnamed IIFE fuznction kahte hain.
         console.log("IIFE second syntax")
     }
 )();
