@@ -1,13 +1,14 @@
-// for in
+// for of
 
 let array = [3,4,"tr",3];
-for(let a in array){  //ye array ke element ko iterate karte wakt element ko string main convert kar deta hai
-    // console.log(a);
+for(let a of array){  //ye array ke element ko iterate karte wakt element ko uske acctual type(string,number) main hi rahne deta hai
+
+    // console.log(typeof a);
 }
-    
+
 let str = "hello world!";
 for(let s in str){
-    // console.log(str[s]);
+    console.log(str[s]);
 }
 
 let map = new Map() //Map objects are collections of key-value pairs. A key in the Map may only occur once; it is unique in the Map's collection. A Map object is iterated by key-value pairs — a for...of loop returns a 2-member array of [key, value] for each iteration. esse for...in loop se iterate nhi kiya ja sakta.
@@ -18,16 +19,16 @@ map.set("rb","ruby")
 
 // console.log(map)
 
-for(let key in map){
-    console.log(key);  //yeha ye kuch nhi print karega kyu map for..in ke through iterable nhi hai
+for(let [key,value] of map){
+    // console.log(`${key} and value is ${value}`)
 }
 
 const newObj = {
     name:"javascript",
-    price:"9999",
+    price:"9999"
 }
-console.log(newObj)
-for(let key in newObj){
-    // console.log(typeof key)
-    console.log(`${key} value is ${newObj[key]}`)  // for...of loop se object iterable nhi hote hain inke liye hame for...in loop ka use karna padta hai
-}
+// console.log(newObj)
+// for(let O of newObj){
+    // console.log(O)  // for...of loop se object iterable nhi hote hain inke liye hame for...in loop ka use karna padta hai
+// }
+
