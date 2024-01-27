@@ -1,13 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <link rel="shortcut icon" href="../Executioncontext.png" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    <h1 id="h1Tag">hello world</h1>
+    <!-- // difference among innerHTML,innerText,textContent -->
+    <button onclick="createNewElement()">click</button>
+    <!-- <h1 id="h1Tag">this is new website that <span style="display:none;">helps beginner</span> to learn</h1> -->
+    <div class="parent">
+        <h1 class="day"><span>Monday</span></h1>
+        <h1 class="day">Tuesday</h1>
+        <h1 class="day">Wednesday</h1>
+        <h1 class="day">Thursday</h1>
+    </div>
 </body>
 <script src="script.js"></script>
+<script>
+    let h1list = document.querySelectorAll("h1");
+    h1list.forEach(item=>{
+        item.style.backgroundColor = 'green'
+    })
+
+    /*
+    -------------select html tags----------
+    1. querySelector()
+    2. querySelectorAll()
+    3. getElementById()
+    4. getElementsByClassName()
+    5. getElementsByTagName()
+
+    ------------edit , remove, add element in html through js----------
+    let parent = document.querySelector("div")
+    let li = document.createElement("li")
+    parent.appendChild(li);
+
+    */ 
+
+    // -------------added new element-----------
+    function createNewElement(){
+        let parentDiv = document.querySelector(".parent")
+        let li = document.createElement("li")
+        li.append(document.createTextNode("this is li tag"))
+        parentDiv.appendChild(li);
+    }
+    createNewElement();
+
+    // -------replace an html tag with another html tag---------
+
+    let firstElem = document.querySelector("h1:nth-child(1)")
+    let span = document.createElement('span')
+    span.append(document.createTextNode("span tag is replaced with h1 tag"))
+    firstElem.replaceWith(span)
+
+    // -------remove element---------
+    let lastElem = document.querySelector("h1:nth-child(2)")
+    lastElem.outerHTML = "<h1>element is changed with outerHTML</h1>"
+    // lastElem.remove()
+
+</script>
+
 </html>
