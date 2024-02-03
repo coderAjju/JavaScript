@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>html Events</title>
+    <style>
+      body > div {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+      }
+      .box {
+        width: 70px;
+        height: 70px;
+        border: 1px solid black;
+      }
+      #box2 {
+        content: "";
+        position: absolute;
+        width: 10px;
+        border:none;
+        height: 10px;
+        border-radius: 50%;
+        background-color: rgb(248, 248, 248);
+        box-shadow: inset 0px 0px 3px #6d6c6c;
+        box-shadow: 0 0 10px 5px white;
+      }
+    </style>
+  </head>
+  <body style="background-color: #414141; color: aliceblue">
+    <div>
+      <div id="box1" class="box">hello</div>
+      <div id="box2" class="box"></div>
+      <div id="box3" class="box"></div>
+      <div id="box4" class="box"></div>
+      <div id="box5" class="box"></div>
+      <div id="box6" class="box"></div>
+    </div>
+  </body>
+  <script>
+    
+        document.addEventListener("keydown", (e) => {
+      let date =e.keyCode
+      console.log(date,e.key);
+    });
+
+    // document.addEventListener("DOMContentLoaded", () => {
+    //   document.addEventListener("mousemove", (e) => {
+    //     box2.style.left = `${e.clientX + box2.clientWidth}px`
+    //     box2.style.top = `${e.clientY + box2.clientHeight}px`
+    //   });
+    // });
+
+    // document.getElementById('owl').onclick = function(){
+    //     alert("owl clicked")
+    // }
+
+    // attachEvent()
+    // jQuery - on
+
+    // type, timestamp, defaultPrevented
+    // target, toElement, srcElement, currentTarget,
+    // clientX, clientY, screenX, screenY
+    // altkey, ctrlkey, shiftkey, keyCode
+
+    // document.getElementById('images').addEventListener('click', function(e){
+    //     console.log("clicked inside the ul");
+    // }, false)
+
+    // document.getElementById('owl').addEventListener('click', function(e){
+    //     console.log("owl clicked");
+    //     e.stopPropagation()
+    // }, false)
+
+    // document.getElementById('google').addEventListener('click',function(e){
+    //     e.preventDefault();
+    //     e.stopPropagation()
+    //     console.log("google clicked");
+    // }, false)
+
+    // document.querySelector('#images').addEventListener('click', function(e){
+    //     console.log(e.target.tagName)
+    // })
+    // console.log(e.target.tagName);
+    //     if (e.target.tagName === 'IMG') {
+    //         console.log(e.target.id);
+    //         let removeIt = e.target.parentNode
+    //         removeIt.remove()
+    //     }
+    // removeIt.parentNode.removeChild(removeIt)
+  </script>
+</html>
